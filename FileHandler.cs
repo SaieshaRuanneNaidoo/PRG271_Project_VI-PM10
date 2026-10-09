@@ -110,7 +110,7 @@ namespace Project_PRG271
                 return false;
             }
 
-            if (!id.StartsWith("WR_"))
+            if (!id.StartsWith("WR-"))
             {
                 return false;
             }

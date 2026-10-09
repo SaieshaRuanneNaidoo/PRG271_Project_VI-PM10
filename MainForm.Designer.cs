@@ -435,6 +435,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Baobab Ridge Wildlife Rehabilitation Records";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
             this.grpDetails.ResumeLayout(false);

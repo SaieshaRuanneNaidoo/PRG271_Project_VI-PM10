@@ -29,7 +29,7 @@ namespace Project_PRG271
             //tells the user about the bad lines and its ONLY here so its gonna show once
             if (FileHandler.LinesSkipped > 0)
             {
-                MessageBox.Show(FileHandler.LinesSkipped + "Lines Skipped");
+                MessageBox.Show(FileHandler.LinesSkipped + " Line/s Skipped");
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
