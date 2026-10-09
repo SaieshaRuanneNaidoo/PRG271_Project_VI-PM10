@@ -42,11 +42,13 @@
             this.txtScore = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtSpecies = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.dgvAnimals = new System.Windows.Forms.DataGridView();
             this.grpSearch.SuspendLayout();
             this.grpDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).BeginInit();
             this.SuspendLayout();
             // 
             // grpSearch
@@ -79,9 +81,9 @@
             // 
             // grpDetails
             // 
-            this.grpDetails.Controls.Add(this.button3);
-            this.grpDetails.Controls.Add(this.button2);
-            this.grpDetails.Controls.Add(this.button1);
+            this.grpDetails.Controls.Add(this.btnClear);
+            this.grpDetails.Controls.Add(this.btnSaveChanges);
+            this.grpDetails.Controls.Add(this.btnAdd);
             this.grpDetails.Controls.Add(this.txtSpecies);
             this.grpDetails.Controls.Add(this.txtAge);
             this.grpDetails.Controls.Add(this.txtScore);
@@ -94,7 +96,7 @@
             this.grpDetails.Controls.Add(this.lblName);
             this.grpDetails.Location = new System.Drawing.Point(12, 98);
             this.grpDetails.Name = "grpDetails";
-            this.grpDetails.Size = new System.Drawing.Size(298, 394);
+            this.grpDetails.Size = new System.Drawing.Size(298, 320);
             this.grpDetails.TabIndex = 1;
             this.grpDetails.TabStop = false;
             this.grpDetails.Text = "Animal Details";
@@ -180,38 +182,51 @@
             this.txtSpecies.Size = new System.Drawing.Size(137, 22);
             this.txtSpecies.TabIndex = 8;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(12, 252);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(12, 252);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(64, 35);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSaveChanges
             // 
-            this.button2.Location = new System.Drawing.Point(98, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 35);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Enabled = false;
+            this.btnSaveChanges.Location = new System.Drawing.Point(82, 252);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(127, 35);
+            this.btnSaveChanges.TabIndex = 9;
+            this.btnSaveChanges.Text = "Save Changes";
+            this.btnSaveChanges.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.Location = new System.Drawing.Point(215, 252);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 35);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(215, 252);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(64, 35);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // dgvAnimals
+            // 
+            this.dgvAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnimals.Location = new System.Drawing.Point(368, 12);
+            this.dgvAnimals.Name = "dgvAnimals";
+            this.dgvAnimals.RowHeadersWidth = 51;
+            this.dgvAnimals.RowTemplate.Height = 24;
+            this.dgvAnimals.Size = new System.Drawing.Size(872, 249);
+            this.dgvAnimals.TabIndex = 2;
+            this.dgvAnimals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnimals_CellContentClick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 626);
+            this.ClientSize = new System.Drawing.Size(1252, 783);
+            this.Controls.Add(this.dgvAnimals);
             this.Controls.Add(this.grpDetails);
             this.Controls.Add(this.grpSearch);
             this.Name = "MainForm";
@@ -221,6 +236,7 @@
             this.grpSearch.PerformLayout();
             this.grpDetails.ResumeLayout(false);
             this.grpDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,9 +257,10 @@
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dgvAnimals;
     }
 }
 

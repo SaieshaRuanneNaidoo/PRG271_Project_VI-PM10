@@ -26,5 +26,10 @@ namespace Project_PRG271
         {
 
         }
+
+        private void dgvAnimals_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
