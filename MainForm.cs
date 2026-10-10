@@ -29,12 +29,8 @@ namespace Project_PRG271
             //tells the user about the bad lines and its ONLY here so its gonna show once
             if (FileHandler.LinesSkipped > 0)
             {
-                MessageBox.Show(FileHandler.LinesSkipped + " Line/s Skipped");
+                MessageBox.Show(FileHandler.LinesSkipped + " Line/s Skipped"); 
             }
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void RefreshGrid()
@@ -45,10 +41,17 @@ namespace Project_PRG271
             dgvAnimals.DataSource = null;
             dgvAnimals.DataSource = animals;
 
-           //grid highlights foirst row by itself so clear it otherwise delete might remove a row usedr never picked
+            //grid highlights foirst row by itself so clear it otherwise delete might remove a row usedr never picked
             dgvAnimals.ClearSelection();
             dgvAnimals.CurrentCell = null;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
 
         private void label5_Click(object sender, EventArgs e)
         {

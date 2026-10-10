@@ -57,7 +57,7 @@ namespace Project_PRG271
             }
         }
 
-        //when written to file its displayed as such
+        //when written to file its displayed as such like they asked us in the proj doc
         public string ToLine()
         {
             return Id + "|" + Name + "|" + Species + "|" + Age + "|" + Score + "|" + Status + "|" + HousingUnit;

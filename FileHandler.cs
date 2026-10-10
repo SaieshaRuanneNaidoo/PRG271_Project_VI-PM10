@@ -17,7 +17,7 @@ namespace Project_PRG271
         //bad lines skipped last time we loaded
         public static int LinesSkipped = 0;
 
-        //reads animals.txt and returns list of animals
+        //reads animals.txt and returns the list of animals
         public static List<Animal> Load()
         {
             List<Animal> animals = new List<Animal> ();
